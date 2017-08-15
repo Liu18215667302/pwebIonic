@@ -14,21 +14,48 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-royal">
-      <h1 class="title">Left</h1>
+      <h1 class="title">刘兆龙简历</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
+        <ion-item class="item-icon-right" menu-close ng-click="login()">
+          基本信息
+          <i class="icon ion-ios-arrow-right"></i>
         </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
+        <ion-item class="item-icon-right" menu-close href="#/app/search">
+          技能信息
+          <i class="icon ion-ios-arrow-right"></i>
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        <ion-item class="item-icon-right" menu-close href="#/app/browse">
+          求学成果
+          <i class="icon ion-ios-arrow-right"></i>
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item class="item-icon-right" menu-close href="#/app/playlists">
+          教育信息
+          <i class="icon ion-ios-arrow-right"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" menu-close href="#/app/playlists">
+          工作经历
+          <i class="icon ion-ios-arrow-right"></i>
+        </ion-item>
+        <div class="item item-divider item-icon-left"
+             on-tap="isShowProject()"
+        >
+          <i ng-show="!isProject" class="icon ion-ios-plus-outline" ></i>
+          <i ng-show="isProject" class="icon ion-ios-minus-outline" ></i>
+          项目信息
+        </div>
+        <ion-item ng-show="isProject" class="item-icon-right" menu-close href="#/app/playlists">
+          应用项目
+          <i class="icon ion-ios-arrow-right"></i>
+        </ion-item>
+        <ion-item ng-show="isProject" class="item-icon-right" menu-close href="#/app/playlists">
+          科研项目
+          <i class="icon ion-ios-arrow-right"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" menu-close href="#/app/playlists">
+          个人评价
+          <i class="icon ion-ios-arrow-right"></i>
         </ion-item>
       </ion-list>
     </ion-content>
