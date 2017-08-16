@@ -1,5 +1,23 @@
 <ion-view view-title="技能信息">
-  <ion-content>
-    <h1>技能信息</h1>
+  <ion-content class="padding">
+    <h4 class="title-left">{{ skillInfo[0].name }}</h4>
+    <p class="skill-content">{{ skillInfo[0].content }}</p>
+    <h4 class="title-left">{{ skillInfo[1].name }}</h4>
+    <p class="skill-content">{{ skillInfo[1].content }}</p>
+    <h4 class="title-left">{{ skillInfo[2].name }}</h4>
+    <p class="skill-content">{{ skillInfo[2].content }}</p>
+    <h4 class="title-left">{{ skillInfo[3].name }}</h4>
+    <p class="skill-content">{{ skillInfo[3].content }}</p>
+    <h4 class="title-left">{{ skillInfo[4].name }}</h4>
+    <p class="skill-content">{{ skillInfo[4].content }}</p>
   </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="buttons">
+      <a class="button button-clear icon icon-left ion-chevron-left" href="#/app/baseInfo">上一页</a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <a class="button button-clear icon icon-right ion-chevron-right" href="#/app/achievement">下一页</a>
+    </div>
+  </ion-footer-bar>
 </ion-view>

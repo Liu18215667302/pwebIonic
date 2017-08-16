@@ -27,3 +27,12 @@
   padding: 5px;
   text-align: left;
 }
+
+/*skill.html*/
+.skill-content{
+  text-align: justify;
+  text-indent:2em;
+}
+.title-left {
+  font-weight: bold;
+}
