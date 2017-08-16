@@ -1,5 +1,62 @@
 <ion-view view-title="基本信息">
   <ion-content>
-    <h1>基本信息</h1>
+    <table class="base-info-table">
+      <tr>
+        <th>姓名：</th>
+        <td>{{ myBaseInfo.name }}</td>
+        <th>性别：</th>
+        <td>{{ myBaseInfo.sex }}</td>
+      </tr>
+      <tr>
+        <th>年龄：</th>
+        <td>{{ myBaseInfo.age }}</td>
+        <th>政治面貌：</th>
+        <td>{{ myBaseInfo.politics }}</td>
+      </tr>
+      <tr>
+        <th>出生年月：</th>
+        <td colspan="3">{{ myBaseInfo.birthday }}</td>
+      </tr>
+      <tr>
+        <th>邮箱：</th>
+        <td colspan="3">{{ myBaseInfo.email }}</td>
+      </tr>
+      <tr>
+        <th>手机：</th>
+        <td colspan="3">{{ myBaseInfo.phone }}</td>
+      </tr>
+      <tr>
+        <th>微信：</th>
+        <td colspan="3">{{ myBaseInfo.wechat }}</td>
+      </tr>
+      <tr>
+        <th>QQ：</th>
+        <td colspan="3">{{ myBaseInfo.qq }}</td>
+      </tr>
+      <tr>
+        <th>户籍：</th>
+        <td colspan="3">{{ myBaseInfo.family }}</td>
+      </tr>
+      <tr>
+        <th>通讯地址：</th>
+        <td colspan="3">{{ myBaseInfo.address }}</td>
+      </tr>
+      <tr>
+        <th>最高学历：</th>
+        <td colspan="3">{{ myBaseInfo.highEducation }}</td>
+      </tr>
+      <tr>
+        <th>毕业学校：</th>
+        <td colspan="3">{{ myBaseInfo.graduated }}</td>
+      </tr>
+      <tr>
+        <th>专业：</th>
+        <td colspan="3">{{ myBaseInfo.major }}</td>
+      </tr>
+      <tr>
+        <th>研究方向：</th>
+        <td colspan="3">{{ myBaseInfo.direction }}</td>
+      </tr>
+    </table>
   </ion-content>
 </ion-view>
