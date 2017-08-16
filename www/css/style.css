@@ -2,3 +2,11 @@
 .input-label {
   width: 50px;
 }
+
+/*welcome.html*/
+.welcome-text {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50%;
+}

@@ -30,49 +30,96 @@ angular.module('starter', ['ionic','app.login', 'starter.controllers'])
       templateUrl: 'templates/doLogin.html',
       controller: 'DoLogin'
     })
+    //侧边栏菜单
     .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
+      url: '/app',
+      abstract: true,
+      templateUrl: 'templates/menu.html',
+      controller: 'AppCtrl'
+    })
+    //基本信息
+    .state('app.baseInfo', {
+      url: '/baseInfo',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/baseInfo.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    //技能信息
+    .state('app.skill', {
+      url: '/skill',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/skill.html'
         }
       }
     })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+    //求学成果
+    .state('app.achievement', {
+      url: '/achievement',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/achievement.html'
+        }
       }
-    }
-  });
+    })
+    //教育信息
+    .state('app.education', {
+      url: '/education',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/education.html'
+        }
+      }
+    })
+    //工作经历
+    .state('app.work', {
+      url: '/work',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/work.html'
+        }
+      }
+    })
+    //应用项目
+    .state('app.appProject', {
+      url: '/appProject',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/appProject.html'
+        }
+      }
+    })
+    //科研项目
+    .state('app.sicProject', {
+      url: '/sicProject',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sicProject.html'
+        }
+      }
+    })
+    //个人评价
+    .state('app.personal', {
+      url: '/personal',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/personal.html'
+         // controller: 'PlaylistsCtrl'
+        }
+      }
+    })
+    //欢迎页面
+    .state('app.welcome', {
+      url: '/welcome',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/welcome.html'
+          // controller: 'PlaylistsCtrl'
+        }
+      }
+    });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/welcome');
 });
