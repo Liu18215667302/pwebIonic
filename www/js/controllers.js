@@ -1,8 +1,20 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $ionicHistory, $location, $window) {
 
-  //项目信息侧边栏开关
+  /**
+   * 返回
+   */
+  $scope.goBack = function () {
+    $location.path("/app/welcome");
+    $window.location.reload(true);
+    //$state.go("app.welcome", {}, {reload: true});
+  }
+
+  /**
+   * 项目信息侧边栏开关
+   * @type {boolean}
+   */
   $scope.isProject = false;
   $scope.isShowProject = function () {
     $scope.isProject = !$scope.isProject;

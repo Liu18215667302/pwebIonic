@@ -22,7 +22,7 @@ angular.module("app.login",[])
    */
   $scope.doLogin = function () {
     if ($scope.loginData.username == "lzl" && $scope.loginData.password == "123456") {
-      $location.path("/app/playlists");
+      $location.path("/app/welcome");
     } else {
       $ionicPopup.alert({
         title: '系统提示',
