@@ -9,7 +9,9 @@ angular.module('starter', ['ionic',
   'app.baseInfo',
   'app.skill',
   'starter.controllers',
-  'app.services'])
+  'app.services',
+  'app.common'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

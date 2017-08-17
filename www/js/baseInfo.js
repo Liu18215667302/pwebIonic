@@ -1,6 +1,15 @@
 angular.module("app.baseInfo", [])
-  .controller("BaseInfoController", function ($scope, webService) {
+  .controller("BaseInfoController", function ($scope, webService, commonFactory) {
 
     //获取我的基本信息
-    $scope.myBaseInfo = webService.getBaseInfo();
+    baseInfo();
+
+    /**
+     * 基本信息
+     */
+    function baseInfo() {
+      commonFactory.loadingShow();
+      $scope.myBaseInfo = webService.getBaseInfo();
+      commonFactory.loadingHide();
+    }
   });

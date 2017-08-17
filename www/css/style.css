@@ -1,3 +1,14 @@
+/*Loading*/
+.loading-container .loading {
+  background-color: rgba(0, 0, 0, 0);
+}
+.spinner svg {
+  width: 100px;
+  height: 100px;
+}
+.backdrop.active {
+  opacity: 0.4;
+}
 /* Login.html */
 .input-label {
   width: 50px;
