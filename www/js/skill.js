@@ -12,7 +12,7 @@ angular.module("app.skill", [])
      */
     function skillInfo() {
       commonFactory.loadingShow();
-      $scope.skillInfo = webService.getSkillInfo();
+      $scope.skillInfos = webService.getSkillInfo();
       commonFactory.loadingHide();
     }
   });

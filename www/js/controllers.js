@@ -6,9 +6,14 @@ angular.module('starter.controllers', [])
    * 返回
    */
   $scope.goBack = function () {
+    $ionicHistory.nextViewOptions({
+      disableAnimate: false,
+      disableBack: true,
+      historyRoot: true
+    });
     $location.path("/app/welcome");
-    $window.location.reload(true);
-    //$state.go("app.welcome", {}, {reload: true});
+    //刷新
+   // $window.location.reload(true);
   }
 
   /**

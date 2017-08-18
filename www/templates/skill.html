@@ -1,15 +1,12 @@
 <ion-view view-title="技能信息">
-  <ion-content class="padding">
-    <h4 class="title-left">{{ skillInfo[0].name }}</h4>
-    <p class="skill-content">{{ skillInfo[0].content }}</p>
-    <h4 class="title-left">{{ skillInfo[1].name }}</h4>
-    <p class="skill-content">{{ skillInfo[1].content }}</p>
-    <h4 class="title-left">{{ skillInfo[2].name }}</h4>
-    <p class="skill-content">{{ skillInfo[2].content }}</p>
-    <h4 class="title-left">{{ skillInfo[3].name }}</h4>
-    <p class="skill-content">{{ skillInfo[3].content }}</p>
-    <h4 class="title-left">{{ skillInfo[4].name }}</h4>
-    <p class="skill-content">{{ skillInfo[4].content }}</p>
+  <ion-content class="padding"
+               overflow-scroll="false"
+               has-bouncing="true"
+  >
+    <div ng-repeat="skillInfo in skillInfos">
+      <h4 class="title-left">{{ skillInfo.name }}</h4>
+      <p class="skill-content">{{ skillInfo.content }}</p>
+    </div>
   </ion-content>
   <ion-footer-bar class="bar-stable">
     <div class="buttons">
