@@ -1,8 +1,13 @@
 <ion-view view-title="技能信息">
-  <ion-content class="padding"
-               overflow-scroll="false"
-               has-bouncing="true"
-  >
+  <ion-content class="padding">
+    <!--下拉刷新-->
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()"
+    >
+    </ion-refresher>
+
+    <!--内容-->
     <div ng-repeat="skillInfo in skillInfos">
       <h4 class="title-left">{{ skillInfo.name }}</h4>
       <p class="skill-content">{{ skillInfo.content }}</p>

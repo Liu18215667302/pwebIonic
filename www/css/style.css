@@ -9,6 +9,12 @@
 .backdrop.active {
   opacity: 0.4;
 }
+/*ion-refresher*/
+.icon-refreshing .spinner svg {
+  width: 28px;
+  height: 28px;
+}
+
 /* Login.html */
 .input-label {
   width: 50px;

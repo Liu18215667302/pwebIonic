@@ -1,8 +1,12 @@
 <ion-view view-title="基本信息">
-  <ion-content class="padding"
-               overflow-scroll="false"
-               has-bouncing="true"
-  >
+  <ion-content class="padding">
+    <!--下拉刷新-->
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()"
+      >
+    </ion-refresher>
+    <!--内容-->
     <table class="base-info-table">
       <tr>
         <th>姓名：</th>
