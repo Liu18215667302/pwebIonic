@@ -9,6 +9,7 @@ angular.module('starter', ['ionic',
   'app.baseInfo',
   'app.skill',
   'app.achievement',
+  'app.education',
   'starter.controllers',
   'app.services',
   'app.common'
@@ -71,7 +72,7 @@ angular.module('starter', ['ionic',
       views: {
         'menuContent': {
           templateUrl: 'templates/achievement.html',
-          controller: 'achievementFactory'
+          controller: 'achievementController'
         }
       }
     })
@@ -80,7 +81,8 @@ angular.module('starter', ['ionic',
       url: '/education',
       views: {
         'menuContent': {
-          templateUrl: 'templates/education.html'
+          templateUrl: 'templates/education.html',
+          controller: 'educationController'
         }
       }
     })

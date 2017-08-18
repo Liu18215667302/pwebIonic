@@ -1,5 +1,67 @@
-<ion-view view-title="求学成果">
+<ion-view view-title="教育经历">
   <ion-content>
-    <h1>求学成果</h1>
+    <!--下拉刷新-->
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="onRefresh()"
+    >
+    </ion-refresher>
+
+    <!--内容-->
+    <ion-slide-box active-slide="0"
+                   does-continue="true"
+                   auto-play="true"
+                   slide-interval="6000"
+                   ng-style="getContentHeight()"
+    >
+      <ion-slide ng-repeat="education in educations">
+        <table class="education-table">
+          <tr>
+            <th colspan="2" align="center" class="title" style="text-align:center;">
+              {{ education.graduateSchool }}
+            </th>
+          </tr>
+          <tr>
+            <th>时间：</th>
+            <td>{{ education.graduateTime }}</td>
+          </tr>
+          <tr>
+            <th>职务：</th>
+            <td>{{ education.duty }}</td>
+          </tr>
+          <tr>
+            <th>学历：</th>
+            <td>{{ education.diploma }}</td>
+          </tr>
+          <tr ng-if="education.college && education.college != ''">
+            <th>学院：</th>
+            <td>{{ education.college }}</td>
+          </tr>
+          <tr ng-if="education.major && education.major != ''">
+            <th>专业：</th>
+            <td>{{ education.major }}</td>
+          </tr>
+          <tr ng-if="education.direction && education.direction != ''">
+            <th>方向：</th>
+            <td>{{ education.direction }}</td>
+          </tr>
+          <tr ng-if="education.other && education.other != ''">
+            <th valign="top">其他：</th>
+            <td>
+              {{ education.other }}
+            </td>
+          </tr>
+        </table>
+      </ion-slide>
+    </ion-slide-box>
   </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="buttons">
+      <a class="button button-clear icon icon-left ion-chevron-left" href="#/app/achievement">上一页</a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <a class="button button-clear icon icon-right ion-chevron-right" href="#/app/work">下一页</a>
+    </div>
+  </ion-footer-bar>
 </ion-view>

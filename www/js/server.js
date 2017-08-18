@@ -52,6 +52,70 @@ angular.module("app.services", [])
     {content: '校级优秀研究生毕业论文（基于混沌的流密码算法研究）'}
   ];
 
+  //教育经历
+  var education = [
+    {
+      graduateSchool: '重庆邮电大学',
+      graduateTime: '2013.09—2016.07',
+      duty: '班长',
+      diploma: '研究生',
+      college: '计算机科学与技术学院',
+      major: '计算机科学与技术',
+      direction: '信息安全',
+      other: '学业奖学金二等奖一次，学业奖学金三等奖二次，“校级优秀研究生干部”称号，“校级优秀硕士论文”称号'
+    },
+    {
+      graduateSchool: '山东省滨州学院',
+      graduateTime: '2009.09—2013.07',
+      duty: '班长',
+      diploma: '大学',
+      college: '信息工程学院',
+      major: '计算机科学与技术',
+      direction: '',
+      other: '学业奖学金一等奖一次，学业奖学金二等奖三次，“校级优秀学生”称号，“校级优秀团员”称号，“校级优秀毕业生”称号。'
+    },
+    {
+      graduateSchool: '沂水二中',
+      graduateTime: '2005.09—2009.07',
+      duty: '学生',
+      diploma: '高中',
+      college: '',
+      major: '',
+      direction: '',
+      other: ''
+    },
+    {
+      graduateSchool: '山东省沂水县实验中学',
+      graduateTime: '2002.09—2005.07',
+      duty: '卫生委员，生活委员',
+      diploma: '初中',
+      college: '',
+      major: '',
+      direction: '',
+      other: ''
+    },
+    {
+      graduateSchool: '山东省沂水县长虹小学',
+      graduateTime: '2002.03—2002.07',
+      duty: '学生',
+      diploma: '小学',
+      college: '',
+      major: '',
+      direction: '',
+      other: ''
+    },
+    {
+      graduateSchool: '山东省沂水县蛮庄小学',
+      graduateTime: '1996.09—2002.01',
+      duty: '组长',
+      diploma: '小学',
+      college: '',
+      major: '',
+      direction: '',
+      other: ''
+    }
+  ];
+
   return {
     /**
      * 我的基本信息
@@ -73,6 +137,12 @@ angular.module("app.services", [])
      */
     getAchievement: function () {
       return achievement;
+    },
+    /**
+     * 教育信息
+     */
+    getEducations: function () {
+      return education;
     }
   }
 });

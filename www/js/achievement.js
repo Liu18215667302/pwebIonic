@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/8/18 0018.
  */
 angular.module("app.achievement", [])
-.controller("achievementFactory", function ($scope, $timeout, webService, commonFactory) {
+.controller("achievementController", function ($scope, $timeout, webService, commonFactory) {
 
   //获取求学成果
   getAchievement();

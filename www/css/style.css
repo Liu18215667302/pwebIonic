@@ -15,6 +15,15 @@
   height: 28px;
 }
 
+/*ion-slide-box*/
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  color: #000;
+  background-color: #fff; text-align: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; }
+
 /* Login.html */
 .input-label {
   width: 50px;
@@ -59,4 +68,23 @@
   font-size: 16px;
   text-align: justify;
   text-indent: 0.5em;
+}
+
+/*education.html*/
+.education-table {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.education-table th {
+  width: 20%;
+  padding: 5px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.education-table td {
+  padding: 5px;
+  text-align: left;
 }
