@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/8/18 0018.
  */
 angular.module("app.education", [])
-.controller("educationController", function ($scope, $timeout, webService, commonFactory) {
+.controller("educationController", function ($scope, $timeout, webService, commonFactory, $ionicActionSheet, $ionicSlideBoxDelegate) {
 
   //获得教育信息
   getEducation();
@@ -36,5 +36,55 @@ angular.module("app.education", [])
     var str = {height: '500px'};
     str.height = height + 'px';
     return str;
+  }
+
+  /**
+   * 上拖事件
+   */
+  var onDragUpTime = 0;
+  $scope.onDragUpSlide = function () {
+
+    if (onDragUpTime == 30) {
+      onDragUpTime++;
+      actionSheet();
+    } else if (onDragUpTime < 31){
+      onDragUpTime++;
+    }
+  }
+
+  /**
+   * 上拉菜单
+   */
+  function actionSheet() {
+    var buttonStr = [];
+    angular.forEach($scope.educations, function (data,index,array) {
+      if (index == 0) {
+        return;
+      }
+      var str = {text:''};
+      str.text = data.graduateSchool;
+      buttonStr.push(str);
+    });
+
+    //上拉框
+    $ionicActionSheet.show({
+      buttons: buttonStr,
+      destructiveText: $scope.educations[0].graduateSchool,
+      titleText: '教育经历',
+      cancelText: '取消',
+      cancel: function() {
+        onDragUpTime = 0;
+      },
+      buttonClicked: function(index) {
+        onDragUpTime = 0;
+        $ionicSlideBoxDelegate.$getByHandle("educationSlide").slide(index + 1, 1000);
+        return true;
+      },
+      destructiveButtonClicked: function () {
+        onDragUpTime = 0;
+        $ionicSlideBoxDelegate.$getByHandle("educationSlide").slide(0, 1000);
+        return true;
+      }
+    });
   }
 });
