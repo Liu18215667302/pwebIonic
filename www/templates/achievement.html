@@ -1,5 +1,27 @@
 <ion-view view-title="求学成果">
-  <ion-content>
-    <h1>求学成果</h1>
+  <ion-content class="padding">
+    <!--下拉刷新-->
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()"
+    >
+    </ion-refresher>
+
+    <!--内容-->
+    <div>
+      <p ng-repeat="achievement in achievements" class="achievement-content">
+        <strong>{{ $index + 1 }}.&nbsp;&nbsp;</strong>
+        {{ achievement.content }}
+      </p>
+    </div>
   </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="buttons">
+      <a class="button button-clear icon icon-left ion-chevron-left" href="#/app/skill">上一页</a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <a class="button button-clear icon icon-right ion-chevron-right" href="#/app/education">下一页</a>
+    </div>
+  </ion-footer-bar>
 </ion-view>

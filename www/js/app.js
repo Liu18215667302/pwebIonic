@@ -8,6 +8,7 @@ angular.module('starter', ['ionic',
   'app.login',
   'app.baseInfo',
   'app.skill',
+  'app.achievement',
   'starter.controllers',
   'app.services',
   'app.common'
@@ -69,7 +70,8 @@ angular.module('starter', ['ionic',
       url: '/achievement',
       views: {
         'menuContent': {
-          templateUrl: 'templates/achievement.html'
+          templateUrl: 'templates/achievement.html',
+          controller: 'achievementFactory'
         }
       }
     })

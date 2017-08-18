@@ -43,6 +43,15 @@ angular.module("app.services", [])
     }
   ];
 
+  //求学成果
+  var achievement = [
+    {content: 'Yong Wang, Zhaolong Liu, Jianbin Ma. A pseudorandom number generator based on piecewise logistic map. Nonlinear Dynamics. 2016. 83(4):2373-2391(SCI二区).'},
+    {content: 'Yong Wang, Zhaolong Liu, Peng Lei. Cryptographic Properties Analysis of Piecewise Logistic Map. 2014 International Symposium on Nonlinear Theary and its Applications. 2014:393-396(国际会议).'},
+    {content: 'Bo, H., Peng, L., Qin, P., Liu, Z., Bo, H., & Peng, L., et al. (2013). A method for designing hash function based on chaotic neural network.Proceedings of International Workshop on Cloud Computing & Information Security, 52(2), 229-233(国际会议).'},
+    {content: '软件著作权（S盒性能测试系统V1.0）'},
+    {content: '校级优秀研究生毕业论文（基于混沌的流密码算法研究）'}
+  ];
+
   return {
     /**
      * 我的基本信息
@@ -57,6 +66,13 @@ angular.module("app.services", [])
      */
     getSkillInfo: function () {
       return skillInfo;
+    },
+    /**
+     * 求学成果
+     * @returns {[*,*,*,*,*]}
+     */
+    getAchievement: function () {
+      return achievement;
     }
   }
 });

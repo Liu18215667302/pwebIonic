@@ -53,3 +53,10 @@
 .title-left {
   font-weight: bold;
 }
+
+/*achievement.html*/
+.achievement-content {
+  font-size: 16px;
+  text-align: justify;
+  text-indent: 0.5em;
+}
