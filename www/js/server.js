@@ -141,6 +141,114 @@ angular.module("app.services", [])
     }
   ];
 
+  //应用项目信息
+  var appProjectInfo = [
+    {
+      name: '软件生态系统——云测、众测、远程调测、运营平台',
+      time: '2016.06—至今',
+      type: 'APP测试系统',
+      duty: 'JavaWeb开发工程师',
+      workContent: [
+        {info: '根据需求完成系统的设计与编码；'},
+        {info: '修改测试人员提出的问题；'},
+        {info: '与UCD对接页面；'},
+        {info: '辅助解答客户问题。'}
+      ],
+      other: 'APP测试系统'
+    },
+    {
+      name: 'DevCloud（公有云）测试系统',
+      time: '2017.05—至今',
+      type: 'APP及手游测试',
+      duty: 'JavaWeb开发工程师',
+      workContent: [
+        {info: '前端页面编码；'},
+        {info: '前端bug修改；'},
+        {info: '前端样式风格修改；'},
+        {info: '模块后台代码编写。'}
+      ],
+      other: '手机APP测试，手游测试'
+    },
+    {
+      name: '云龙系统——JAD（场景库）',
+      time: '2017.04—至今',
+      type: '数据管理',
+      duty: 'JavaWeb开发工程师',
+      workContent: [
+        {info: '前端页面编码；'},
+        {info: '前端bug修改；'},
+        {info: '前端样式风格修改。'}
+      ],
+      other: '数据管理、采集系统'
+    },
+    {
+      name: '云龙系统——Monitor',
+      time: '2017.02—2017.04',
+      type: '服务器监视系统',
+      duty: 'JavaWeb开发工程师',
+      workContent: [
+        {info: '前端页面编码；'},
+        {info: '前端bug修改；'},
+        {info: '前端样式风格修改。'}
+      ],
+      other: '监控服务器数据，包括软件系统，数据库，服务硬件设备'
+    },
+    {
+      name: '商户管理系统/创客管理系统',
+      time: '2015.08—至今',
+      type: '数据管理类',
+      duty: 'JavaWeb开发工程师',
+      workContent: [
+        {info: '根据客户提出的需求进行系统功能设计；'},
+        {info: '设计系统数据库(采用MySQL数据库)；'},
+        {info: '利用Servlet技术对系统进行编码；'},
+        {info: '系统维护。'}
+      ],
+      other: '对客户数据进行管理'
+    },
+  ];
+
+  //科研项目信息
+  var sicProject = [
+    {
+      name: '基于物理模型的新型多媒体加密算法研究',
+      time: '2015.12—2018.12',
+      type: '国家自然科学基金项目',
+      duty: '研究员',
+      workContent: [
+        {info: '对Logistic混沌映射存在问题进行研究并提出改进方案'},
+        {info: '对混沌流密码算法进行研究'},
+        {info: '利用C语言编码，测试算法的效率；利用MATLAB编码，测试算法及混沌映射的性能指标'}
+      ],
+      other: '基于物理模型的新型多媒体加密算法研究'
+    },
+    {
+      name: '基于混沌的安全高效密码算法设计',
+      time: '2013.07—2016.06',
+      type: '重庆市基础与前沿研究计划项目',
+      duty: '研究员',
+      workContent: [
+        {info: '对图像加密算法的研究(利用Cat映射和Standard映射实现彩色图像置换)'},
+        {info: '利用MATLAB对算法的性能指标进行测试'}
+      ],
+      other: '重庆市基础与前沿研究计划项目'
+    },
+    {
+      name: '重庆市网络经营者交易信用标准研究',
+      time: '2013.12—2015.12',
+      type: '重庆市工商局横向项目',
+      duty: '研究员',
+      workContent: [
+        {info: '利用MATLAB对交易信用指标进行计算'}
+      ],
+      other: '重庆市网络经营者交易信用标准研究'
+    }
+  ];
+
+  //个人评价
+  var personal = {
+    info: '我是一个乐于助人、性格内向、能吃苦不怕苦、学习能力强的人。在日常生活中善于总结问题，善于发现问题，善于钻研。我能够在很短的时间内融入一个团队，并与团队共进退。'
+  };
   return {
     /**
      * 我的基本信息
@@ -174,6 +282,27 @@ angular.module("app.services", [])
      */
     getWorkInfo: function () {
       return workInfo;
+    },
+    /**
+     * 应用项目
+     * @returns {Array}
+     */
+    getAppProject: function () {
+      return appProjectInfo;
+    },
+    /**
+     * 科研项目
+     * @returns {Array}
+     */
+    getSicProject: function () {
+      return sicProject;
+    },
+    /**
+     * 个人评价
+     * @returns {{}}
+     */
+    getPersonal: function () {
+      return personal;
     }
   }
 });

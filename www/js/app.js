@@ -1,9 +1,3 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic',
   'app.login',
   'app.baseInfo',
@@ -11,6 +5,9 @@ angular.module('starter', ['ionic',
   'app.achievement',
   'app.education',
   'app.work',
+  'app.appProject',
+  'app.sicProject',
+  'app.personal',
   'starter.controllers',
   'app.services',
   'app.common'
@@ -102,7 +99,8 @@ angular.module('starter', ['ionic',
       url: '/appProject',
       views: {
         'menuContent': {
-          templateUrl: 'templates/appProject.html'
+          templateUrl: 'templates/appProject.html',
+          controller: 'appProjectController'
         }
       }
     })
@@ -111,7 +109,8 @@ angular.module('starter', ['ionic',
       url: '/sicProject',
       views: {
         'menuContent': {
-          templateUrl: 'templates/sicProject.html'
+          templateUrl: 'templates/sicProject.html',
+          controller: 'sicProjectController'
         }
       }
     })
@@ -120,8 +119,8 @@ angular.module('starter', ['ionic',
       url: '/personal',
       views: {
         'menuContent': {
-          templateUrl: 'templates/personal.html'
-         // controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/personal.html',
+          controller: 'personalController'
         }
       }
     })
@@ -131,7 +130,6 @@ angular.module('starter', ['ionic',
       views: {
         'menuContent': {
           templateUrl: 'templates/welcome.html'
-          // controller: 'PlaylistsCtrl'
         }
       }
     });
