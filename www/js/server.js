@@ -116,6 +116,31 @@ angular.module("app.services", [])
     }
   ];
 
+  //工作经历
+  var workInfo = [
+    {
+      company: '中软国际科技有限公司（成都分公司）',
+      time: '2016.6—至今',
+      duty: 'Java WEB开发工程师',
+      content: [
+        {info: '根据需求完成系统的设计与编码；'},
+        {info: '修改测试人员提出的问题；'},
+        {info: '与UCD对接页面；'},
+        {info: '辅助解答客户问题。'}
+      ]
+    },
+    {
+      company: '重庆费切尔科技有限公司',
+      time: '2015.3—2015.8',
+      duty: '软件工程师(游戏服务器的开发)',
+      content: [
+        {info:'根据需求完成系统的设计与编码；'},
+        {info:'修改测试人员提出的问题；'},
+        {info:'辅助前台完成部分手游前端的编码。'}
+      ]
+    }
+  ];
+
   return {
     /**
      * 我的基本信息
@@ -143,6 +168,12 @@ angular.module("app.services", [])
      */
     getEducations: function () {
       return education;
+    },
+    /**
+     * 工作信息
+     */
+    getWorkInfo: function () {
+      return workInfo;
     }
   }
 });

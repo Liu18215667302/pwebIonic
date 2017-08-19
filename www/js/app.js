@@ -10,6 +10,7 @@ angular.module('starter', ['ionic',
   'app.skill',
   'app.achievement',
   'app.education',
+  'app.work',
   'starter.controllers',
   'app.services',
   'app.common'
@@ -91,7 +92,8 @@ angular.module('starter', ['ionic',
       url: '/work',
       views: {
         'menuContent': {
-          templateUrl: 'templates/work.html'
+          templateUrl: 'templates/work.html',
+          controller: 'workController'
         }
       }
     })

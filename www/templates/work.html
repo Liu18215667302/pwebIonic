@@ -1,5 +1,38 @@
-<ion-view view-title="求学成果">
+<ion-view view-title="工作经历">
   <ion-content>
-    <h1>求学成果</h1>
+    <!--下拉刷新-->
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()"
+    >
+    </ion-refresher>
+
+    <!--内容-->
+    <div class="list card" ng-repeat="workInfo in workInfos">
+      <div class="item item-avatar">
+        <h2>{{ workInfo.company}}</h2>
+        <p>{{ workInfo.duty}}</p>
+      </div>
+      <div class="item item-body">
+        <ul style="font-size: 15px;">
+          <li ng-repeat="info in workInfo.content">
+            {{ $index + 1 }}）
+            {{ info.info }}
+          </li>
+        </ul>
+      </div>
+      <div class="item" style="padding: 5px 10px;">
+        <p>{{ workInfo.time}}</p>
+      </div>
+    </div>
   </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="buttons">
+      <a class="button button-clear icon icon-left ion-chevron-left" href="#/app/education">上一页</a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <a class="button button-clear icon icon-right ion-chevron-right" href="#/app/appProject">下一页</a>
+    </div>
+  </ion-footer-bar>
 </ion-view>
