@@ -30,4 +30,10 @@ angular.module("app.welcome", [])
       $scope.popover.show($event)
     }
 
+    /**
+     * 退出
+     */
+    $scope.exit = function () {
+      ionic.Platform.exitApp();
+    }
   });
