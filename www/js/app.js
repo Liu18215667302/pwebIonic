@@ -8,6 +8,7 @@ angular.module('starter', ['ionic',
   'app.appProject',
   'app.sicProject',
   'app.personal',
+  'app.welcome',
   'starter.controllers',
   'app.services',
   'app.common'
@@ -129,7 +130,8 @@ angular.module('starter', ['ionic',
       url: '/welcome',
       views: {
         'menuContent': {
-          templateUrl: 'templates/welcome.html'
+          templateUrl: 'templates/welcome.html',
+          controller: 'welcomeController'
         }
       }
     });

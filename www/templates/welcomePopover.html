@@ -1,0 +1,12 @@
+<ion-popover-view>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title">操作步骤</h1>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <ul class="welcome-popover-content">
+      <li ng-repeat="help in helpInfos">
+        {{ $index + 1 }}、{{ help.info }}
+      </li>
+    </ul>
+  </ion-content>
+</ion-popover-view>

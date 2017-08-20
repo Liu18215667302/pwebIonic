@@ -24,6 +24,11 @@
   background-color: #fff; text-align: center;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; }
 
+/*浮动框*/
+.platform-ios .popover-arrow:after {
+  background-color: #886aea;
+}
+
 /* Login.html */
 .input-label {
   width: 50px;
@@ -35,6 +40,19 @@
   font-size: 25px;
   font-weight: bold;
   padding-top: 50%;
+}
+.welcome-button-help {
+  width: 100%;
+  text-align: right;
+}
+.welcome-popover-content {
+  width: 100%;
+}
+.welcome-popover-content li {
+  font-size: 14px;
+  padding: 2px 0;
+  text-align: justify;
+  text-indent: 1em;
 }
 
 /*baseInfo.html*/

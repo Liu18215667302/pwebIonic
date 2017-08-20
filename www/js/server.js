@@ -249,6 +249,14 @@ angular.module("app.services", [])
   var personal = {
     info: '我是一个乐于助人、性格内向、能吃苦不怕苦、学习能力强的人。在日常生活中善于总结问题，善于发现问题，善于钻研。我能够在很短的时间内融入一个团队，并与团队共进退。'
   };
+
+  //帮助信息
+  var helpInfo = [
+    {info:'点击左上角按钮或者向左拖动显示菜单'},
+    {info:'点击页面右上角返回首页'},
+    {info:'内容页下拉刷新数据'},
+    {info:'滑动框页面上拖显示菜单'}
+  ];
   return {
     /**
      * 我的基本信息
@@ -303,6 +311,13 @@ angular.module("app.services", [])
      */
     getPersonal: function () {
       return personal;
+    },
+    /**
+     * 帮助信息
+     * @returns {[*,*,*,*]}
+     */
+    getHelpInfo: function () {
+      return helpInfo;
     }
   }
 });
