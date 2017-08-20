@@ -1,5 +1,8 @@
 <ion-view view-title="科研项目">
-  <ion-content class="padding">
+  <ion-content padding="true"
+               overflow-scroll="false"
+               has-bouncing="true"
+  >
       <!--下拉刷新-->
       <ion-refresher
         pulling-text="下拉刷新..."
@@ -25,7 +28,7 @@
               </th>
             </tr>
             <tr>
-              <th>时间：</th>
+              <th>项目日期：</th>
               <td>{{ project.time }}</td>
             </tr>
             <tr>

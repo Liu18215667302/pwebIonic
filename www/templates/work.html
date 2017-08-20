@@ -1,14 +1,17 @@
 <ion-view view-title="工作经历">
-  <ion-content>
+  <ion-content padding="true"
+               overflow-scroll="false"
+               has-bouncing="true"
+  >
     <!--下拉刷新-->
     <ion-refresher
       pulling-text="下拉刷新..."
-      on-refresh="doRefresh()"
+      on-refresh="onRefresh()"
     >
     </ion-refresher>
 
     <!--内容-->
-    <div class="list card" ng-repeat="workInfo in workInfos">
+    <div class="list card" style="margin-top: 10px;" ng-repeat="workInfo in workInfos">
       <div class="item item-avatar">
         <h2>{{ workInfo.company}}</h2>
         <p>{{ workInfo.duty}}</p>

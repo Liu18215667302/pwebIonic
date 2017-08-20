@@ -70,7 +70,7 @@ angular.module("app.education", [])
     $ionicActionSheet.show({
       buttons: buttonStr,
       destructiveText: $scope.educations[0].graduateSchool,
-      titleText: '教育经历',
+      titleText: '<h3 class="title color-gray">教育经历</h3>',
       cancelText: '取消',
       cancel: function() {
         onDragUpTime = 0;
