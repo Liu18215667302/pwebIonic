@@ -26,7 +26,6 @@ angular.module("app.welcome", [])
      * 帮助事件
      */
     $scope.helpEvent = function ($event) {
-      console.info("helpEvent");
       $scope.popover.show($event)
     }
 
