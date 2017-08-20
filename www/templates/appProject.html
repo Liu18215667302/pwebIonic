@@ -1,5 +1,73 @@
 <ion-view view-title="应用项目">
-  <ion-content>
-    <h1>应用项目</h1>
+  <ion-content class="padding">
+      <!--下拉刷新-->
+      <ion-refresher
+        pulling-text="下拉刷新..."
+        on-refresh="doRefresh()"
+      >
+      </ion-refresher>
+
+      <!--内容-->
+      <ion-slide-box active-slide="0"
+                     does-continue="true"
+                     auto-play="true"
+                     slide-interval="6000"
+                     ng-style="getContentHeight()"
+                     delegate-handle="educationSlide"
+                     on-drag-up="onDragUpSlide()"
+      >
+        <ion-slide ng-repeat="project in projectInfos">
+          <table class="project-table">
+            <tr>
+              <th colspan="2" align="center"
+                  style="text-align:center; padding-bottom: 10px;">
+                {{ project.name }}
+              </th>
+            </tr>
+            <tr>
+              <th>时间：</th>
+              <td>{{ project.time }}</td>
+            </tr>
+            <tr>
+              <th>项目类型：</th>
+              <td>{{ project.type }}</td>
+            </tr>
+            <tr>
+              <th>我的职务：</th>
+              <td>{{ project.duty }}</td>
+            </tr>
+            <tr>
+              <th>工作内容：</th>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="width: 100%;">
+                <ul class="project-ul">
+                  <li ng-repeat="info in project.workContent">
+                    {{ $index + 1 }}）{{ info.info }}
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>项目信息：</th>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="width: 100%;">{{ project.other }}</td>
+            </tr>
+          </table>
+        </ion-slide>
+      </ion-slide-box>
   </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="buttons">
+      <a class="button button-clear icon icon-left ion-chevron-left" href="#/app/work">上一页</a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <a class="button button-clear icon icon-right ion-chevron-right" href="#/app/sicProject">下一页</a>
+    </div>
+  </ion-footer-bar>
 </ion-view>

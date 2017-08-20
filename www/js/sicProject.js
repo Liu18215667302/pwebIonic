@@ -25,4 +25,23 @@ angular.module("app.sicProject", [])
         $scope.$broadcast("scroll.refreshComplete");
       }, 2000);
     }
+
+    /**
+     * 获取内容高度
+     */
+    $scope.getContentHeight = function () {
+      var height = screen.height;
+      height = height - 100;
+
+      var str = {height: '500px'};
+      str.height = height + 'px';
+      return str;
+    }
+
+    /**
+     * 向上拖拽
+     */
+    $scope.onDragUpSlide = function () {
+
+    }
   });

@@ -1,5 +1,21 @@
 <ion-view view-title="个人评价">
-  <ion-content>
-    <h1>个人评价</h1>
+  <ion-content class="padding">
+    <!--下拉刷新-->
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()"
+    >
+    </ion-refresher>
+
+    <!--内容-->
+    <div class="personal-content">
+      {{ personal.info }}
+    </div>
   </ion-content>
+  <ion-footer-bar class="bar-stable">
+    <div class="buttons">
+      <a class="button button-clear icon icon-left ion-chevron-left" href="#/app/sicProject">上一页</a>
+    </div>
+    <h1 class="title"></h1>
+  </ion-footer-bar>
 </ion-view>

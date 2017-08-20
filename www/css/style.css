@@ -96,3 +96,38 @@
 .item-avatar {
   padding-left: 10px;
 }
+
+/*project.html*/
+.project-table {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.project-table th{
+  width: 30%;
+  padding: 5px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.project-table td{
+  padding: 5px;
+  text-align: left;
+}
+
+.project-ul {
+  width: 100%;
+}
+.project-ul li {
+  width: 100%;
+  padding: 2px 0;
+  text-align: justify;
+  text-indent: 0.5em;
+}
+ /*personal.html*/
+.personal-content {
+  font-size: 16px;
+  text-align: justify;
+  text-indent: 2em;
+}
